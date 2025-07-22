@@ -1,9 +1,60 @@
-p {
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+}
+/* =========== NAVBAR ========== */
 
+h1 {
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: rgb(255 113 12);
+    line-height: 3;
+
+}
+.navbar img {
+    width: 300px;
+    height: auto;
+    image-resolution: inherit;
 }
 .navbar {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;     
+        justify-content: space-between;
+        align-items: center;
+        background: white;    
+        padding: 10px;
+        margin: auto;
+        width: 95%;      
 }
+a {
+    text-decoration: none;
+    color: black;
+    margin: 30px;
+    border: solid 2px rgb(255 113 12);
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+button {
+    color: black;
+    background: white;
+    margin: 30px;
+    border: solid 2px rgb(255 113 12);
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.faviconUser {
+    object-fit: cover;
+    height: auto;
+    max-width: 14%;
+    
+    
+}
+.buttonUser {
+    width: 150px;
+    height: auto;
+}
+/* ============== BANNIERE DE BIENVENUE=============== */
+/* ============== SECTION CARDS=============== */
+
