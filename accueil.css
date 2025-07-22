@@ -1,0 +1,9 @@
+p {
+    text-align: center;
+
+}
+.navbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;     
+}
