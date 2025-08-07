@@ -2,30 +2,45 @@
     margin: 0;
     padding: 0;
 }
-/* =========== NAVBAR ========== */
+
 
 h1 {
+    font-family: 'Manrope', sans-serif;
     text-align: center;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     color: rgb(255 113 12);
-    line-height: 3;
+    line-height: 2.5;
+    animation: slideIn 13s ease 2 alternate;
 
 }
-.navbar img {
-    width: 300px;
-    height: auto;
-    image-resolution: inherit;
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
 }
-.navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: white;    
-        padding: 10px;
-        margin: auto;
-        width: 95%;      
+/* ---------- NAVBAR ---------- */
+.logo {
+    font-family: "Mansalva", sans-serif;
+    font-size: 300%;
+    padding: 10px;
+}
+.logo .orange {
+    color: rgb(255 113 12);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background: rgb(255 221 197);
+    height: 80px;   
 }
 a {
+    font-family: 'Manrope', sans-serif;
     text-decoration: none;
     color: black;
     margin: 30px;
@@ -34,27 +49,102 @@ a {
     padding: 10px;
     
 }
-button {
-    color: black;
-    background: white;
-    margin: 30px;
-    border: solid 2px rgb(255 113 12);
-    border-radius: 15px;
-    padding: 10px;
+
+    /* ---------- BANNIÈRE-HERO ---------- */
+
+.hero {
+    height: 100vh;
+    background-image: url('images/DSCF2097.JPG');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem; /* espace entre le texte et le bouton */
+    margin-top: 500px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    
+}
+.btn-destin {
+    font-weight: bold;
+    color: white;
+}
+/* ---------- SECTION CARDS ---------- */
+#cards {
+    padding: 10rem;
+    background-color: rgb(255 221 197);
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr)); /* déjà responsive*/ /* autofit: essaie de mettre autant de colonnes que possible dans la largeur disponible.Dans un grand écran,plusieurs colonnes. Dans un petit écran, moins de colonnes, voire une seule-- minimun 200px et maximum 1fr (prend toute la place disponible). Si l'écran ets large, les colonnes sont larges. Si l'écran est étroit, elles se réduisent, mais jamais en dessous de 200px */
+    gap: 1.5rem;
+}
+.card-image {
+     border: 1px solid black;
+     border-radius: 10px;
+     overflow: hidden; /*coupe tout se qui dépasse*/
+     text-align: center;
+     padding: 1rem;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     min-height: 280px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
 
 }
-
-.faviconUser {
+.card-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0, 0.2);
+}
+.card-image img {
+    width: 100%;
+    max-width:150px;
+    height: 150px;
     object-fit: cover;
-    height: auto;
-    max-width: 14%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+.card-image p {
+    font-size: 1rem;
+    color:black;
+    font-family: 'Manrope', sans-serif;
+}
+/*----------FOOTER-----------*/
+.container-footer h3 {
+    border-bottom: 1px solid;
     
     
 }
-.buttonUser {
-    width: 150px;
-    height: auto;
+.containers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
-/* ============== BANNIERE DE BIENVENUE=============== */
-/* ============== SECTION CARDS=============== */
-
+.container-footer p {
+    max-width: 300px;
+    
+}
+.containers-cards {
+    padding: 10px;
+}
+.icons img {
+    
+    object-fit: cover;
+    max-width:50px;
+    height: 50px;
+}
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
