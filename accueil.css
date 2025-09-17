@@ -24,6 +24,8 @@ h1 {
     }
 }
 /* ---------- NAVBAR ---------- */
+
+
 .logo {
     font-family: "Mansalva", sans-serif;
     font-size: 300%;
@@ -48,6 +50,9 @@ a {
     border-radius: 15px;
     padding: 10px;
     
+}
+html {
+    scroll-behavior: smooth;
 }
 
     /* ---------- BANNIÈRE-HERO ---------- */
@@ -75,32 +80,62 @@ a {
 .btn-destin {
     font-weight: bold;
     color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    
 }
+.btn-destin .material-symbols-outlined {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+
 /* ---------- SECTION CARDS ---------- */
-#cards {
+.cards {
     padding: 10rem;
     background-color: rgb(255 221 197);
+    padding-right: 5rem;
 }
 .cards-grid {
     display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr)); /* déjà responsive*/ /* autofit: essaie de mettre autant de colonnes que possible dans la largeur disponible.Dans un grand écran,plusieurs colonnes. Dans un petit écran, moins de colonnes, voire une seule-- minimun 200px et maximum 1fr (prend toute la place disponible). Si l'écran ets large, les colonnes sont larges. Si l'écran est étroit, elles se réduisent, mais jamais en dessous de 200px */
+    grid-template-columns:  repeat(auto-fit, minmax(200px, 300px)); /* déjà responsive*/ /* autofit: essaie de mettre autant de colonnes que possible dans la largeur disponible.Dans un grand écran,plusieurs colonnes. Dans un petit écran, moins de colonnes, voire une seule-- minimun 200px et maximum 1fr (prend toute la place disponible). Si l'écran ets large, les colonnes sont larges. Si l'écran est étroit, elles se réduisent, mais jamais en dessous de 200px */
     gap: 1.5rem;
+    justify-content: center;
+    
+    
 }
-.card-image {
-     border: 1px solid black;
-     border-radius: 10px;
-     overflow: hidden; /*coupe tout se qui dépasse*/
-     text-align: center;
-     padding: 1rem;
-     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-     min-height: 280px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
+.card {
+    border: solid 2px rgb(255 113 12);
+    border-radius: 10px;
+    overflow: hidden; /*coupe tout se qui dépasse*/
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 260px;
+    width: 60%;
+    &.card-image {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+   
+   }
+   &.card-description {
+    font-size: 1rem;
+    color:black;
+    font-family: 'Manrope', sans-serif;
+}
 
+
+    
+    
 }
+
 .card-image:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0, 0.2);
@@ -108,16 +143,12 @@ a {
 .card-image img {
     width: 100%;
     max-width:150px;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
-.card-image p {
-    font-size: 1rem;
-    color:black;
-    font-family: 'Manrope', sans-serif;
-}
+
 /*----------FOOTER-----------*/
 .container-footer h3 {
     border-bottom: 1px solid;
@@ -135,7 +166,7 @@ a {
     
 }
 .containers-cards {
-    padding: 10px;
+    padding: 20px 0px 20px 20px;
 }
 .icons img {
     
