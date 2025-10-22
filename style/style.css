@@ -120,8 +120,6 @@ html {
     grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr)); /* déjà responsive*/ /* autofit: essaie de mettre autant de colonnes que possible dans la largeur disponible.Dans un grand écran,plusieurs colonnes. Dans un petit écran, moins de colonnes, voire une seule-- minimun 200px et maximum 1fr (prend toute la place disponible). Si l'écran ets large, les colonnes sont larges. Si l'écran est étroit, elles se réduisent, mais jamais en dessous de 200px */
     gap: 1.5rem;
     justify-content: center;
-    
-    
 }
 .card {/*J'applique du NESTING pour que ce soit un code mieux lisible*/
     border: solid 2px rgb(255 113 12);
@@ -146,7 +144,7 @@ html {
     font-size: 1rem;
     color:black;
     font-family: 'Manrope', sans-serif;
-}   
+    }   
 }
 
 .card-image:hover {
