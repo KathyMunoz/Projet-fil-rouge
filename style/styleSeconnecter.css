@@ -1,0 +1,73 @@
+@import "styleIndex.css";
+/* ---------- Organisation Log-in ---------- */
+.image-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40rem;/*espace entre photo et login*/
+}
+.login {
+    margin-left: 100px;
+}
+.login-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+.login p { 
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btns-connection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-login, #email, #pass {
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color: black;
+    border: solid 2px rgb(239 34 157);
+    border-radius: 15px;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+.link-popular-profiles:hover {
+    color: rgb(239 34 157);
+}
+.forgot-pwd {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: black;
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+}
+.forgot-pwd:hover {
+    color: rgb(239 34 157);
+}
+/* ---------- Organisation navigation sans etre connecté et s'enregistrer---------- */
+.navigation-register {
+    display: flex;               
+    justify-content: space-between; 
+    align-items: center;         
+    padding-left: 100px;         
+    padding-right: 100px;  
+    padding-bottom: 250px;
+}
+.register-link {
+    color:black;
+}
+.register-link:hover {
+    color: rgb(239 34 157);
+}
+

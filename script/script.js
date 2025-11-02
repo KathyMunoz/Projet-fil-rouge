@@ -1,8 +1,19 @@
-//VARIABLES
+// --- MENU EXPLORER ---
 const btnExplorer = document.getElementById("btn-explorer");
 const menuExplorer = document.getElementById("menuExplorer");
 
-//Je clique sur mon bouton EXPLORER et le menu deroulant s'ouvre
-btnExplorer.addEventListener("click", () => {
-    menuExplorer.style.display = menuExplorer.style.display === "block" ? "none" : "block";
+//lorsque l'événement click se produit sur mon button, fait {}
+btnExplorer.addEventListener("click", () => {//ouvre mon menu explorer deroulant 
+  menuExplorer.style.display = menuExplorer.style.display === "block" ? "none" : "block";
+});
+
+document.addEventListener("click", function (e) {//cache mon menu deroulant si click ailleurs
+  if (e.target !== btnExplorer && !menuExplorer.contains(e.target)) {
+    menuExplorer.style.display = "none"; 
+  }
+})
+
+// --- CLICK SUR LOGO ET REDIGER VERS PAGE ACCUEIL ---
+document.querySelector(".logo").addEventListener("click", function() {
+  document.location.href = "index.html";
 });

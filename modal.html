@@ -1,0 +1,149 @@
+<div class="dropdownAccount">
+  <button id="btn-account">Mon compte</button>
+  <div id="menuProfile" class="dropdown-content-Account"><!-- Menu deroulant -->
+      <button id="openProfile">Paramètres de profil</button>
+      <button id="openAccount">Paramètres de compte</button>
+  </div>
+</div>
+<!-- Modale qui s'ouvre quand je click sur le button Mon compte -->
+<div id="modalProfile" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeProfile">&times;</span>
+      <h3>Paramètres de profil</h3>
+      <p>Ici, vous pouvez modifier vos informations personnelles.</p>
+  </div>
+</div>
+
+<!-- Modale Compte -->
+<div id="modalAccount" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeAccount">&times;</span>
+      <h3>Paramètres de compte</h3>
+      <p>Ici, vous pouvez gérer vos préférences de compte.</p>
+  </div>
+</div>
+
+
+
+/* ---------- CSS avec JS : btn-account et son menu deroulant---------- */
+
+.dropdownAccount {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-Account {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px;
+}
+
+.dropdown-content-Account button {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.dropdown-content-Account button:hover {
+    background-color: rgb(255 113 12);
+    color: white;
+}
+
+/* --- Style du modal btn-account --- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+  }
+
+  .close:hover {
+    color: red;
+  }
+
+
+
+
+  // --- MENU MON COMPTE ---
+const btnAccount = document.getElementById("btn-account");
+const menuProfile = document.getElementById("menuProfile");
+
+btnAccount.addEventListener("click", (e) => {
+  e.stopPropagation(); // empêche la fermeture immédiate
+  menuProfile.style.display = menuProfile.style.display === "block" ? "none" : "block";
+});
+
+// --- MODALES ---
+const modalProfile = document.getElementById("modalProfile");
+const modalAccount = document.getElementById("modalAccount");
+
+const openProfile = document.getElementById("openProfile");
+const openAccount = document.getElementById("openAccount");
+
+const closeProfile = document.getElementById("closeProfile");
+const closeAccount = document.getElementById("closeAccount");
+
+openProfile.addEventListener("click", function () {
+  modalProfile.style.display = "block";
+  menuProfile.style.display = "none";
+});
+
+openAccount.addEventListener("click", function () {
+  modalAccount.style.display = "block";
+  menuProfile.style.display = "none";
+});
+
+closeProfile.addEventListener("click", function () {
+  modalProfile.style.display = "none";
+});
+
+closeAccount.addEventListener("click", function () {
+  modalAccount.style.display = "none";
+});
+
+// --- FERMETURE si on clique dehors ---
+document.addEventListener("click", function (e) {
+  if (e.target === modalProfile) {//je click sur mon menu, j'affiche parametres de profil et si je click ailleurs ma modal(fond gris) se cache//e.target est l'element clické: fond gris
+    modalProfile.style.display = "none";
+  }
+  if (e.target === modalAccount) {//je click sur mon menu, j'affiche parametres de compte et si je click ailleurs ma modal se cache
+    modalAccount.style.display = "none";
+  }
+  if (!e.target.matches("#btn-account")) {//quand je click sur Mon compte, affiche le menu si je click ailleurs ça cache mon menu deroulant
+    menuProfile.style.display = "none";
+  }
+});
+
+
+
+<form>
+  <fieldset class="flogin">
+    <legend>Formulaire d'inscription</legend>
+<label for="cv">Ajoute ta photo de profil:</label>
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" ><br>
+  </fieldset>
+</form>
