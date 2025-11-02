@@ -2,7 +2,7 @@
     margin: 0;/*Suprime toutes les marges par défaut*/
     padding: 0;/*Supprime tous les espaces internes par défaut*/
 }/*Chaque navigateur applique par défaut des marges et paddings, comme ça je pars d'une base propre avant d'appliquer mon style*/
-
+@import "responsive.css";
 
 h1 {
     font-family: 'Manrope', sans-serif;

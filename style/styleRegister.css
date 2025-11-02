@@ -1,4 +1,5 @@
 @import "styleIndex.css";
+@import "responsive.css";
 .registration-form {
   font-family: Manrope;
   margin: 0 auto;
