@@ -1,0 +1,76 @@
+/* Header fixe en haut */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* ------------- HERO photo ---------------- */
+main {
+  margin-top: 80px; /* pour éviter que le hero passe sous le header */
+}
+
+.hero {
+  display: block;
+  height: 100vh; /* photo prend toute la hauteur */
+}
+
+/* ------------- MENU MOBILE EN BAS ---------------- */
+.mobile-menu {
+  display: none; /* caché par défaut (ordinateur) */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+  border-top: 2px solid rgb(255 113 12);
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+}
+
+.mobile-item {
+  text-decoration: none;
+  color: black;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.mobile-item i {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+/* ----------- VERSION MOBILE UNIQUEMENT ----------- */
+@media (max-width: 768px) {
+
+  /* Masquer le menu du haut */
+  .nav-links {
+    display: none;
+  }
+
+  header {
+    background: white;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 200%;
+  }
+
+  /* Montrer menu mobile */
+  .mobile-menu {
+    display: flex;
+  }
+
+  /* Masquer sections non souhaitées sur mobile */
+  .cards-section,
+  footer {
+    display: none;
+  }
+}

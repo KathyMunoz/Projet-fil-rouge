@@ -40,32 +40,8 @@
             <a href="signIn.html" class="mobile-item"><i class="fa-solid fa-user"></i><span>Compte</span></a>
         </div>
         <main> 
-            <section class="hero">
-                <div class="hero-content">
-                    <a href="#" class="btn-destin">
-                <span class="material-symbols-outlined">search</span>Cherche ton destin</a>
-                </div>
-            </section>
-            <section class="cards-section" id="btn-popular-destinations">
-                <div class="cards-grid">  
-                    <div class="card card-image">
-                        <img src="images/madrid.jpg"alt="fleur rose">
-                        <p class="card-description">Madrid</p>
-                    </div>
-                    <div class=" card card-image">
-                        <img src="images/ville.JPG"alt="ville avec grands batiment">
-                        <p class="card-description">Tokyo</p>
-                    </div>
-                    <div class="card card-image">
-                        <img src="images/culture.JPG"alt="catedral Guayaquil Ecuador">
-                        <p class="card-description">Equateur</p>
-                    </div>
-                    <div class="card card-image">
-                        <img src="images/aventure.JPG"alt="animation adrenaline en groupe">
-                        <p class="card-description">Cairns</p>
-                    </div>
-                </div>
-    
+            <section>
+                
             </section>
         </main>
         <footer class="footer">
